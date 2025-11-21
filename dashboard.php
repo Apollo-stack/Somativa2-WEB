@@ -5,7 +5,7 @@ session_start();
 
 // Segurança para a sessão, se o usuario_id não existir é porque ele não está logado
 if (!isset($_SESSION['usuario_id'])) {
-    header("Location: login.html");
+    header("Location: index.html");
     exit;
 }
 

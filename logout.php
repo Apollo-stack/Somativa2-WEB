@@ -10,6 +10,6 @@ session_unset();
 session_destroy();
 
 // Manda para a página de login
-header("Location: login.html");
+header("Location: index.html");
 exit; 
 ?>
