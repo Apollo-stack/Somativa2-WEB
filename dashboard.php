@@ -42,12 +42,11 @@ $resultado_livros = $conn->query($sql_livros);
 <body class="bg-light">
 
     <div class="container mt-4"> <div class="d-flex justify-content-between align-items-center">
-            <h1>Boas-vindas, <?php echo htmlspecialchars($nome_usuario); ?>!</h1>
+            <h1>Bem-vindo, <?php echo htmlspecialchars($nome_usuario); ?>!</h1>
             
-            <a href="logout.php" class="btn btn-danger">Sair (Logout)</a>
+            <a href="logout.php" class="btn btn-danger">Sair</a>
         </div>
         
-        <p>Esta é a sua área restrita.</p>
         
 
 <!--CRUD do Autor-->
