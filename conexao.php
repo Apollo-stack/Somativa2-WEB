@@ -16,7 +16,6 @@ if(!$conn){
     die("Falha de conexão: " . mysqli_connect_error());
 }
 
-echo "Conexão bem sucedida!";
 
 
 ?>
