@@ -87,6 +87,7 @@ $resultado_livros = $conn->query($sql_livros);
                             while ($autor = $resultado_autores->fetch_assoc()) {
                                 echo "<tr>";
                                     echo "<td>" . $autor['id_autor'] . "</td>";
+                                    echo "<td>" . htmlspecialchars($autor['nome_autor']) . "</td>";
                                     echo "<td>
                                             <a href='editar_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-warning btn-sm'>Editar</a> 
                                             <a href='excluir_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-danger btn-sm'>Excluir</a>
