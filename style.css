@@ -1,0 +1,22 @@
+/* Arquivo: style.css */
+
+body {
+    background-color: #f0f2f5; /* Cor de fundo suave */
+    height: 100vh; /* Força o corpo a ter a altura total da tela */
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Estilo específico para o cartão de login */
+.card-login {
+    width: 100%;
+    max-width: 400px; /* Largura máxima um pouco menor */
+    padding: 20px;
+}
+
+/* Estilo específico para o cartão de cadastro */
+.card-cadastro {
+    width: 100%;
+    max-width: 500px; /* Largura máxima um pouco maior */
+}
