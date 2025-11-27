@@ -21,14 +21,14 @@ $stmt_livro->bind_param("i", $id_livro);
 $stmt_livro->execute();
 $resultado_livro = $stmt_livro->get_result();
 $livro = $resultado_livro->fetch_assoc();
-$stmt_livro->close();
+
 
 
 // Busca todos os autores 
 $sql_autores = "SELECT id_autor, nome_autor FROM autores ORDER BY nome_autor";
 $resultado_autores = $conn->query($sql_autores);
 
-
+$stmt_livro->close();
 $conn->close();
 
 ?>
