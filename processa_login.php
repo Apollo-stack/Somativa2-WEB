@@ -28,11 +28,13 @@ if ($resultado->num_rows === 1) {
 
     } else {
         
-        echo "Email ou senha inválidos.";
+        header("Location: login.html?erro=true");
+        exit;
     }
     
 } else {
-    echo "Email ou senha inválidos.";
+    header("Location: login.html?erro=true");
+    exit;
 }
 
 $stmt->close();
