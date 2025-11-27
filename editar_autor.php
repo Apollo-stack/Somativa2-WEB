@@ -40,12 +40,12 @@ $conn->close();
 </head>
 
 
-<body class="bg-light"> <!-- bg-light do Bootstrap + seu CSS -->
+<body class="bg-light"> 
 
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <!-- Cartão para padronizar com o Dashboard -->
+                
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <h3 class="card-title mb-4">Editar Autor</h3>
@@ -54,7 +54,7 @@ $conn->close();
                             
                             <div class="mb-3">
                                 <label class="form-label">Nome do Autor:</label>
-                                <!-- Adicionei classes form-control para ficar bonito -->
+                                
                                 <input type="text" name="nome_autor" class="form-control" value="<?php echo htmlspecialchars($nome_atual); ?>" required>
                             </div>
                             
