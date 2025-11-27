@@ -4,12 +4,12 @@ session_start();
 
 
 if (!isset($_SESSION['usuario_id'])) {
-    header("Location: index.html");
+    header("Location: ../index.html");
     exit;
 }
 
 
-require_once 'conexao.php';
+require_once '../conexao.php';
 
 
 $id_livro = $_GET['id']; 
@@ -38,7 +38,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Livro</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="CSS/style.css" rel="stylesheet">
+        <link href="../CSS/style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -46,7 +46,7 @@ $conn->close();
     <div class="container mt-5 ">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title h4">Editar Livro</h2> <form action="processa_editar_livro.php" method="POST">
+                <h2 class="card-title h4">Editar Livro</h2> <form action="../Processar/processa_editar_livro.php" method="POST">
                     
                     <div class="mb-3">
                         <label for="tituloInput" class="form-label">Título do Livro:</label>
@@ -63,7 +63,7 @@ $conn->close();
                     <div class="mb-3">
                         <label for="anoInput" class="form-label">Ano de Publicação:</label>
                         <input type="number" class="form-control" id="anoInput" name="ano_publicacao" 
-                            min="1000" max="2099" value="<?php echo $livro['ano_publicacao']; ?>">
+                            min="0" max="2099" value="<?php echo $livro['ano_publicacao']; ?>">
                     </div>
 
                     <div class="mb-3">
@@ -84,7 +84,7 @@ $conn->close();
                     
                     <input type="hidden" name="id_livro" value="<?php echo $id_livro; ?>">
 
-                    <a href="dashboard.php" class="btn btn-secondary">Cancelar</a>
+                    <a href="../dashboard.php" class="btn btn-secondary">Cancelar</a>
                     <button type="submit" class="btn btn-success">Salvar Alterações</button>
                     
                     
