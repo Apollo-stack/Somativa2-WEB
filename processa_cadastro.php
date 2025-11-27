@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 require_once 'conexao.php';
 
 // Recebe os dados
@@ -19,13 +20,12 @@ $classe_alerta = "";
 
 try {
     $stmt->execute();
-    
  
     $mensagem = "Usuário cadastrado com sucesso!";
     $classe_alerta = "alert-success"; 
 
 } catch (mysqli_sql_exception $e) {
-    // O código 1062 é o código padrão do MySQL para "Entrada Duplicada"
+    // O código 1062 é o padrão do MySQL de "Entrada Duplicada"
     if ($e->getCode() == 1062) {
         $mensagem = "Erro: Este e-mail já está cadastrado no sistema.";
         $classe_alerta = "alert-warning"; 
