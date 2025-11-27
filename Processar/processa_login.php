@@ -23,7 +23,7 @@ if ($resultado->num_rows === 1) {
         $_SESSION['usuario_id'] = $usuario['id_usuario']; // (Confirme o nome da coluna ID)
         $_SESSION['usuario_nome'] = $usuario['nome_usuario']; // (Confirme o nome da coluna nome)
         
-        header("Location: dashboard.php");
+        header("Location: ../dashboard.php");
         exit;
 
     } else {
