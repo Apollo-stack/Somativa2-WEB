@@ -1,18 +1,27 @@
-/* Arquivo: style.css */
-
+/* Configuração Geral */
 body {
-    background-color: #f0f2f5; /* Cor de fundo suave */
-    height: 100vh; /* Força o corpo a ter a altura total da tela */
+    font-family: sans-serif; /* Ou a fonte do Bootstrap */
+    background-color: #f0f2f5; /* Fundo cinza claro padrão */
+}
+
+/* --- CLASSE ESPECIAL SÓ PARA LOGIN E CADASTRO --- */
+/* Só usamos esta classe nas páginas que precisam de fundo com imagem e centralização */
+.modo-login {
+    height: 100vh; /* Força altura total */
     display: flex; /* Ativa o Flexbox */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)),
-    url('/Imagem/fundo_login4.jpg');
-    background-repeat: no-repeat;  /* 1. Proíbe a repetição (tira os quadradinhos) */
-    background-size: cover;        /* 2. Estica a imagem para COBRIR a tela toda */
+    
+    /* Imagem de Fundo (Só aparece onde tiver essa classe) */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* Escureci um pouco mais */
+        url('../Imagem/fundo_login.webp');
+    background-size: cover;
     background-position: center;
-    ;
+    background-repeat: no-repeat;
 }
+
+/* Resto do seu CSS (cards, botões, tabelas) continua igual abaixo... */
 
 /* Estilo específico para o cartão de login */
 .card-login {
