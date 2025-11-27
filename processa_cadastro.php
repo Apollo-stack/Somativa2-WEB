@@ -55,22 +55,26 @@ $conn->close();
 
 <body>
     
-    <div class="card shadow-sm" style="max-width: 400px; width: 100%;">
-        <div class="card-body text-center p-4">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                
+                <div class="card shadow-lg">
+                    <div class="card-body">
             
-            <div class="alert <?php echo $classe_alerta; ?>" role="alert">
-                <h4 class="alert-heading h5 mb-2">Aviso</h4>
-                <p class="mb-0"><?php echo $mensagem; ?></p>
-            </div>
+                    <div class="alert <?php echo $classe_alerta; ?>" role="alert">
+                        <h4 class="alert-heading h5 mb-2">Aviso</h4>
+                        <p class="mb-0"><?php echo $mensagem; ?></p>
+                    </div>
 
-            <div class="d-grid gap-2 mt-4">
-                <?php if ($classe_alerta == "alert-success"): ?>
-                    <a href="login.html" class="btn btn-primary">Ir para Login</a>
-                <?php else: ?>
-                    <a href="formulario.html" class="btn btn-secondary">Tentar Novamente</a>
-                <?php endif; ?>
-            </div>
-
+                    <div class="d-grid gap-2 mt-4">
+                        <?php if ($classe_alerta == "alert-success"): ?>
+                            <a href="login.html" class="btn btn-primary">Ir para Login</a>
+                        <?php else: ?>
+                            <a href="formulario.html" class="btn btn-secondary">Tentar Novamente</a>
+                        <?php endif; ?>
+                    </div>
+                </div>                
         </div>
     </div>
 
