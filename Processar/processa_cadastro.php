@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-require_once 'conexao.php';
+require_once '../conexao.php';
 
 // Recebe os dados
 $nome = $_POST["nome"];
@@ -50,7 +50,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Status do Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="CSS/style.css" rel="stylesheet">
+    <link href="../CSS/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -69,9 +69,9 @@ $conn->close();
 
                     <div class="d-grid gap-2 mt-4">
                         <?php if ($classe_alerta == "alert-success"): ?>
-                            <a href="index.html" class="btn btn-primary">Ir para Login</a>
+                            <a href="../index.html" class="btn btn-primary">Ir para Login</a>
                         <?php else: ?>
-                            <a href="formulario.html" class="btn btn-secondary">Tentar Novamente</a>
+                            <a href="../formulario.html" class="btn btn-secondary">Tentar Novamente</a>
                         <?php endif; ?>
                     </div>
                 </div>                
