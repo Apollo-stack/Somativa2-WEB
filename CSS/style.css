@@ -5,7 +5,13 @@ body {
     height: 100vh; /* Força o corpo a ter a altura total da tela */
     display: flex; /* Ativa o Flexbox */
     align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */;
+    justify-content: center; /* Centraliza horizontalmente */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)),
+    url('/Imagem/fundo_login4.jpg');
+    background-repeat: no-repeat;  /* 1. Proíbe a repetição (tira os quadradinhos) */
+    background-size: cover;        /* 2. Estica a imagem para COBRIR a tela toda */
+    background-position: center;
+    ;
 }
 
 /* Estilo específico para o cartão de login */
@@ -13,7 +19,7 @@ body {
     width: 100%;
     max-width: 400px; /* Largura máxima um pouco menor */
     padding: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(251, 251, 251);
     
 }
 
