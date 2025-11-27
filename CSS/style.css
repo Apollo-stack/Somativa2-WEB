@@ -1,7 +1,8 @@
 /* Configuração Geral */
 body {
     font-family: sans-serif; /* Ou a fonte do Bootstrap */
-    background-color: #f0f2f5; /* Fundo cinza claro padrão */
+    background-color: #e8e8e8; /* Fundo cinza claro padrão */
+
 }
 
 /* --- CLASSE ESPECIAL SÓ PARA LOGIN E CADASTRO --- */

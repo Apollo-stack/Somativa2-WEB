@@ -43,16 +43,34 @@ $resultado_livros = $conn->query($sql_livros);
 </head>
 <body>
 
-    <div class="container mt-4"> <div class="d-flex justify-content-between align-items-center">
-            <h1>Bem-vindo, <?php echo htmlspecialchars($nome_usuario); ?>!</h1>
+    <div class="container mt-4">
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-body d-flex justify-content-between align-items-center">
             
-            <a href="logout.php" class="btn btn-dark">Sair</a>
+            <div class="d-flex align-items-center">
+                <h1 class="h4 mb-0 text-secondary">📚 Minha Biblioteca</h1>
+            </div>
+
+            <div>
+                <span class="me-4">Olá, <strong><?php echo htmlspecialchars($nome_usuario); ?></strong></span>
+                
+                <a href="logout.php" class="btn btn-dark btn-sm">Sair</a>
+            </div>
+            
         </div>
-        
-        
+    </div>
+    <p class="text-muted">Gerencie seus livros e autores abaixo.</p>
+
+<!--
+### O que mudou?
+1.  **Caixa Branca (`card`):** Agora o topo tem o mesmo fundo branco dos formulários de login, criando consistência.
+2.  **Organização:** O nome do sistema fica na esquerda e o usuário/sair na direita (`justify-content-between`).
+3.  **Botão Sair:** Troquei o vermelhão (`btn-danger`) pelo cinza escuro (`btn-dark`) para ficar mais suave, mas você pode mudar de volta se preferir o destaque.
+-->
 
 <!--CRUD do Autor-->
-        <hr> <div class="card mb-4">
+        <hr> <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h2 class="card-title h4">Cadastrar Novo Autor</h2>
                 
@@ -67,7 +85,7 @@ $resultado_livros = $conn->query($sql_livros);
         </div>
 
 
-        <div class="card">
+        <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h2 class="card-title h4">Autores Cadastrados</h2>
 
