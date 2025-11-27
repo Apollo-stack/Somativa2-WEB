@@ -40,13 +40,13 @@ $conn->close();
 </head>
 
 
-<body class="bg-light"> 
+<body> 
 
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 
-                <div class="card shadow-sm">
+                <div class="card shadow-lg">
                     <div class="card-body">
                         <h3 class="card-title mb-4">Editar Autor</h3>
 
@@ -62,7 +62,7 @@ $conn->close();
 
                             <div class="d-flex justify-content-between">
                                 <a href="dashboard.php" class="btn btn-secondary">Cancelar</a>
-                                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                                <button type="submit" class="btn btn-success">Salvar Alterações</button>
                             </div>
                             
                         </form>
