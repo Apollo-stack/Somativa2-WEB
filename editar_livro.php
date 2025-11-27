@@ -38,6 +38,8 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Livro</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="CSS/style.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -82,8 +84,9 @@ $conn->close();
                     
                     <input type="hidden" name="id_livro" value="<?php echo $id_livro; ?>">
 
-                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                     <a href="dashboard.php" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-success">Salvar Alterações</button>
+                    
                     
                 </form>
             </div>

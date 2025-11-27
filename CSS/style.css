@@ -1,7 +1,7 @@
 /* Configuração Geral */
 body {
     font-family: sans-serif; /* Ou a fonte do Bootstrap */
-    background-color: #d1d1d1; /* Fundo cinza claro padrão */
+    background-color: #f0f2f5; /* Fundo cinza claro padrão */
 
 }
 
@@ -16,7 +16,7 @@ body {
     /* Imagem de Fundo (Só aparece onde tiver essa classe) */
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* Escureci um pouco mais */
-        url('../Imagem/fundo_login4.jpg');
+        url('../Imagem/fundo_login4.jpg');  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
