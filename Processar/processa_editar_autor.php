@@ -3,11 +3,11 @@ session_start();
 
 
 if (!isset($_SESSION['usuario_id'])) {
-    header("Location: index.html");
+    header("Location: ../index.html");
     exit;
 }
 
-require_once "conexao.php";
+require_once "../conexao.php";
 
 $id_autor = $_POST['id_autor'];
 $novo_nome = $_POST['nome_autor'];
@@ -24,6 +24,6 @@ $stmt->execute();
 $stmt->close();
 $conn->close();
 
-header("Location: dashboard.php");
+header("Location: ../dashboard.php");
 exit;
 ?>
