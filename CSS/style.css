@@ -1,22 +1,19 @@
 /* Configuração Geral */
 body {
-    font-family: sans-serif; /* Ou a fonte do Bootstrap */
-    background-color: #f0f2f5; /* Fundo cinza claro padrão */
+    font-family: sans-serif; 
+    background-color: #f0f2f5; 
 
 }
 
 /* --- CLASSE ESPECIAL SÓ PARA LOGIN E CADASTRO --- */
-/* Só usamos esta classe nas páginas que precisam de fundo com imagem e centralização */
 .modo-login {
     height: 100vh; /* Força altura total */
     display: flex; /* Ativa o Flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    
-    /* Imagem de Fundo (Só aparece onde tiver essa classe) */
+    align-items: center; 
+    justify-content: center; 
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* Escureci um pouco mais */
-        url('../Imagem/fundo_login4.jpg');  
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../Img/fundo_login4.jpg');  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +23,7 @@ body {
 /* Estilo específico para o cartão de login */
 .card-login {
     width: 100%;
-    max-width: 400px; /* Largura máxima um pouco menor */
+    max-width: 400px; 
     padding: 20px;
     background-color: rgb(251, 251, 251);
     
@@ -35,24 +32,24 @@ body {
 /* Estilo específico para o cartão de cadastro */
 .card-cadastro {
     width: 100%;
-    max-width: 500px; /* Largura máxima um pouco maior */
+    max-width: 500px; 
 }
 
-/* Botão Personalizado - Estilo Biblioteca */
+/* Botão Personalizado */
 .btn-custom {
-    background-color: #900C3F; /* Um vinho bonito */
+    background-color: #900C3F; 
     color: white;
     border: none;
 }
 
 .btn-custom:hover {
-    background-color: #581845; /* Um vinho mais escuro quando passa o mouse */
+    background-color: #581845; 
     color: white;
 }
 
 /* Cabeçalho da Tabela com a cor do tema */
 .table-theme thead th {
-    background-color: #900C3F; /* Mesma cor do btn-custom */
+    background-color: #900C3F; 
     color: white;
     border: none;
 }
