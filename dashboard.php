@@ -108,8 +108,8 @@ $resultado_livros = $conn->query($sql_livros);
                                     echo "<td>" . $autor['id_autor'] . "</td>";
                                     echo "<td>" . htmlspecialchars($autor['nome_autor']) . "</td>";
                                     echo "<td>
-                                            <a href='editar_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-warning btn-sm'>Editar</a> 
-                                            <a href='excluir_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-dark btn-sm'>Excluir</a>
+                                            <a href='editar_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-outline-warning btn-sm'>Editar</a> 
+                                            <a href='excluir_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-outline-danger btn-sm'>Excluir</a>
                                           </td>";
                                 echo "</tr>";
                             }
@@ -124,7 +124,7 @@ $resultado_livros = $conn->query($sql_livros);
         </div>
         
 <!--CRUD do livro-->
-        <div class="card mb-4">
+        <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h2 class="card-title h4">Cadastrar Novo Livro</h2>
                 
@@ -168,7 +168,7 @@ $resultado_livros = $conn->query($sql_livros);
                 </form>
             </div>
         </div>
-        <div class="card mb-4">
+        <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h2 class="card-title h4">Livros Cadastrados</h2>
 
@@ -196,8 +196,8 @@ $resultado_livros = $conn->query($sql_livros);
                                     echo "<td>" . htmlspecialchars($livro['genero']) . "</td>";
                                     echo "<td>" . $livro['ano_publicacao'] . "</td>";
                                     echo "<td>
-                                            <a href='editar_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-warning btn-sm'>Editar</a> 
-                                            <a href='excluir_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-dark btn-sm'>Excluir</a>
+                                            <a href='editar_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-outline-warning btn-sm'>Editar</a> 
+                                            <a href='excluir_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-outline-danger btn-sm'>Excluir</a>
                                         </td>";
                                 echo "</tr>";
                             }
