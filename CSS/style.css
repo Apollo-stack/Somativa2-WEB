@@ -28,3 +28,15 @@ body {
     width: 100%;
     max-width: 500px; /* Largura máxima um pouco maior */
 }
+
+/* Botão Personalizado - Estilo Biblioteca */
+.btn-custom {
+    background-color: #3a3938; /* Um vinho bonito */
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #000000; /* Um vinho mais escuro quando passa o mouse */
+    color: white;
+}
