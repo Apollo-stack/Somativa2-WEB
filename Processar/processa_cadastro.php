@@ -69,7 +69,7 @@ $conn->close();
 
                     <div class="d-grid gap-2 mt-4">
                         <?php if ($classe_alerta == "alert-success"): ?>
-                            <a href="../index.html" class="btn btn-primary">Ir para Login</a>
+                            <a href="../index.html" class="btn btn-success">Ir para Login</a>
                         <?php else: ?>
                             <a href="../formulario.html" class="btn btn-secondary">Tentar Novamente</a>
                         <?php endif; ?>
