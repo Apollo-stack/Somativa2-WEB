@@ -17,6 +17,10 @@
         <div class="card-body">
             <h3 class="text-center mb-4">LOGIN</h3>
             
+            <div id="msg-erro" class="alert alert-danger d-none text-center" role="alert">
+                E-mail ou senha incorretos!
+            </div>
+            
             <form action="processa_login.php" method="POST">
                 <div class="mb-3">
                     <label for="email" class="form-label">E-mail</label>
@@ -37,6 +41,16 @@
             </div>
         </div>
     </div>
+
+<script>
+    // Verifica se na URL tem o texto "?erro=true"
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    if (urlParams.has('erro')) {
+        // Se tiver, remove a classe 'd-none' para mostrar o alerta
+        document.getElementById('msg-erro').classList.remove('d-none');
+    }
+</script>
 
 </body>
 </html>
