@@ -72,7 +72,7 @@ $resultado_livros = $conn->query($sql_livros);
                 <h2 class="card-title h4">Autores Cadastrados</h2>
 
                 <table class="table table-striped table-hover">
-                    <thead class="table-dark">
+                    <thead class="table-theme">
                         <tr>
                             <th>ID</th>
                             <th>Nome do Autor</th>
@@ -155,7 +155,7 @@ $resultado_livros = $conn->query($sql_livros);
                 <h2 class="card-title h4">Livros Cadastrados</h2>
 
                 <table class="table table-striped table-hover">
-                    <thead class="table-dark">
+                    <thead class="table-theme">
                         <tr>
                             <th>Título</th>
                             <th>Autor</th>
