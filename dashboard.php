@@ -21,14 +21,14 @@ $resultado_autores = $conn->query($sql_autores);
 
 // Busca todos os livros E o nome do autor 
 $sql_livros = "SELECT 
-                    livros.id_livro, 
-                    livros.titulo, 
-                    livros.genero, 
-                    livros.ano_publicacao,
+                    l.id_livro, 
+                    l.titulo, 
+                    l.genero, 
+                    l.ano_publicacao,
                     autores.nome_autor 
-               FROM livros
-               JOIN autores ON livros.id_autor = autores.id_autor
-               ORDER BY livros.titulo";
+               FROM livros AS l
+               JOIN autores AS a ON l.id_autor = a.id_autor
+               ORDER BY l.titulo";
 $resultado_livros = $conn->query($sql_livros);
 
 ?>
