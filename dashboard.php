@@ -41,12 +41,12 @@ $resultado_livros = $conn->query($sql_livros);
     <link href="CSS/style.css" rel="stylesheet">
 
 </head>
-<body class="bg-light">
+<body>
 
     <div class="container mt-4"> <div class="d-flex justify-content-between align-items-center">
             <h1>Bem-vindo, <?php echo htmlspecialchars($nome_usuario); ?>!</h1>
             
-            <a href="logout.php" class="btn btn-danger">Sair</a>
+            <a href="logout.php" class="btn btn-dark">Sair</a>
         </div>
         
         
@@ -61,7 +61,7 @@ $resultado_livros = $conn->query($sql_livros);
                         <label for="nomeAutorInput" class="form-label">Nome do Autor:</label>
                         <input type="text" class="form-control" id="nomeAutorInput" name="nome_autor" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar Autor</button>
+                    <button type="submit" class="btn btn-custom">Cadastrar Autor</button>
                 </form>
             </div>
         </div>
@@ -91,7 +91,7 @@ $resultado_livros = $conn->query($sql_livros);
                                     echo "<td>" . htmlspecialchars($autor['nome_autor']) . "</td>";
                                     echo "<td>
                                             <a href='editar_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-warning btn-sm'>Editar</a> 
-                                            <a href='excluir_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-danger btn-sm'>Excluir</a>
+                                            <a href='excluir_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-dark btn-sm'>Excluir</a>
                                           </td>";
                                 echo "</tr>";
                             }
@@ -146,7 +146,7 @@ $resultado_livros = $conn->query($sql_livros);
                         </select>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Cadastrar Livro</button>
+                    <button type="submit" class="btn btn-custom">Cadastrar Livro</button>
                 </form>
             </div>
         </div>
@@ -179,7 +179,7 @@ $resultado_livros = $conn->query($sql_livros);
                                     echo "<td>" . $livro['ano_publicacao'] . "</td>";
                                     echo "<td>
                                             <a href='editar_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-warning btn-sm'>Editar</a> 
-                                            <a href='excluir_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-danger btn-sm'>Excluir</a>
+                                            <a href='excluir_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-dark btn-sm'>Excluir</a>
                                         </td>";
                                 echo "</tr>";
                             }

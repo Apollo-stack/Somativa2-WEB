@@ -40,3 +40,10 @@ body {
     background-color: #0a0fab; /* Um vinho mais escuro quando passa o mouse */
     color: white;
 }
+
+/* Cabeçalho da Tabela com a cor do tema */
+.table-theme thead th {
+    background-color: #900C3F; /* Mesma cor do btn-custom */
+    color: white;
+    border: none;
+}
