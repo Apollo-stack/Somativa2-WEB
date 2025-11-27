@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once 'conexao.php';
+require_once '../conexao.php';
 
 $email = $_POST["email"];
 $senha = $_POST["senha"];
@@ -28,12 +28,12 @@ if ($resultado->num_rows === 1) {
 
     } else {
         
-        header("Location: index.html?erro=true");
+        header("Location: ../index.html?erro=true");
         exit;
     }
     
 } else {
-    header("Location: index.html?erro=true");
+    header("Location: ../index.html?erro=true");
     exit;
 }
 
