@@ -5,11 +5,7 @@ body {
     height: 100vh; /* Força o corpo a ter a altura total da tela */
     display: flex; /* Ativa o Flexbox */
     align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-
-    background-image: 
-        linear-gradient rgb(255,255,255,0.9), rgb(255, 255, 255, 0.9),
-        url('Imagem/fundo_login.webp');
+    justify-content: center; /* Centraliza horizontalmente */;
 }
 
 /* Estilo específico para o cartão de login */

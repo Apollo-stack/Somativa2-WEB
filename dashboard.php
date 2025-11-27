@@ -25,7 +25,7 @@ $sql_livros = "SELECT
                     l.titulo, 
                     l.genero, 
                     l.ano_publicacao,
-                    autores.nome_autor 
+                    a.nome_autor 
                FROM livros AS l
                JOIN autores AS a ON l.id_autor = a.id_autor
                ORDER BY l.titulo";
