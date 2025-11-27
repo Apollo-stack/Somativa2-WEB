@@ -6,6 +6,10 @@ body {
     display: flex; /* Ativa o Flexbox */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
+
+    background-image: 
+        linear-gradient rgb(255,255,255,0.9), rgb(255, 255, 255, 0.9),
+        url('Imagem/fundo_login.webp');
 }
 
 /* Estilo específico para o cartão de login */
@@ -13,6 +17,7 @@ body {
     width: 100%;
     max-width: 400px; /* Largura máxima um pouco menor */
     padding: 20px;
+    background-color: rgb(255, 255, 255);
     
 }
 
