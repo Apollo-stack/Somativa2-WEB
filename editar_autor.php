@@ -20,7 +20,7 @@ $stmt->execute();
 $resultado = $stmt->get_result();
 $autor = $resultado->fetch_assoc();
 
-// Salva o nome atual para usar no 'value' do input
+// Salva o nome atual para usar no value do input
 $nome_atual = $autor['nome_autor'];
 
 $stmt->close();
