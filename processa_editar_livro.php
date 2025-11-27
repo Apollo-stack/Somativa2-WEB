@@ -22,6 +22,7 @@ $stmt = $conn->prepare($sql);
 
 $stmt->bind_param("ssiii", $titulo, $genero, $ano, $id_autor, $id_livro);
 
+
 $stmt->execute();
 
 $stmt->close();
@@ -29,5 +30,4 @@ $conn->close();
 
 header("Location: dashboard.php");
 exit;
-
 ?>
