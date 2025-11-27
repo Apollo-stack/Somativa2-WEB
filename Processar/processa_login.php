@@ -20,8 +20,8 @@ if ($resultado->num_rows === 1) {
     // Verifica a senha
     if (password_verify($senha, $hash_do_banco)) {
         
-        $_SESSION['usuario_id'] = $usuario['id_usuario']; // (Confirme o nome da coluna ID)
-        $_SESSION['usuario_nome'] = $usuario['nome_usuario']; // (Confirme o nome da coluna nome)
+        $_SESSION['usuario_id'] = $usuario['id_usuario']; // Confirma o nome da coluna ID
+        $_SESSION['usuario_nome'] = $usuario['nome_usuario']; // Confirma o nome da coluna nome
         
         header("Location: ../dashboard.php");
         exit;

@@ -62,19 +62,13 @@ $resultado_livros = $conn->query($sql_livros);
     </div>
     <p class="text-muted">Gerencie seus livros e autores abaixo.</p>
 
-<!--
-### O que mudou?
-1.  **Caixa Branca (`card`):** Agora o topo tem o mesmo fundo branco dos formulários de login, criando consistência.
-2.  **Organização:** O nome do sistema fica na esquerda e o usuário/sair na direita (`justify-content-between`).
-3.  **Botão Sair:** Troquei o vermelhão (`btn-danger`) pelo cinza escuro (`btn-dark`) para ficar mais suave, mas você pode mudar de volta se preferir o destaque.
--->
 
 <!--CRUD do Autor-->
         <hr> <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h2 class="card-title h4">Cadastrar Novo Autor</h2>
                 
-                <form action="processa_autor.php" method="POST">
+                <form action="Processar/processa_autor.php" method="POST">
                     <div class="mb-3">
                         <label for="nomeAutorInput" class="form-label">Nome do Autor:</label>
                         <input type="text" class="form-control" id="nomeAutorInput" name="nome_autor" required>
@@ -108,8 +102,8 @@ $resultado_livros = $conn->query($sql_livros);
                                     echo "<td>" . $autor['id_autor'] . "</td>";
                                     echo "<td>" . htmlspecialchars($autor['nome_autor']) . "</td>";
                                     echo "<td>
-                                            <a href='editar_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-outline-warning btn-sm'>Editar</a> 
-                                            <a href='excluir_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-outline-danger btn-sm'>Excluir</a>
+                                            <a href='Editar/editar_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-outline-warning btn-sm'>Editar</a> 
+                                            <a href='Excluir/excluir_autor.php?id=" . $autor['id_autor'] . "' class='btn btn-outline-danger btn-sm'>Excluir</a>
                                           </td>";
                                 echo "</tr>";
                             }
@@ -128,7 +122,7 @@ $resultado_livros = $conn->query($sql_livros);
             <div class="card-body">
                 <h2 class="card-title h4">Cadastrar Novo Livro</h2>
                 
-                <form action="processa_livro.php" method="POST">
+                <form action="Processar/processa_livro.php" method="POST">
                     
                     <div class="mb-3">
                         <label for="tituloInput" class="form-label">Título do Livro:</label>
@@ -196,8 +190,8 @@ $resultado_livros = $conn->query($sql_livros);
                                     echo "<td>" . htmlspecialchars($livro['genero']) . "</td>";
                                     echo "<td>" . $livro['ano_publicacao'] . "</td>";
                                     echo "<td>
-                                            <a href='editar_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-outline-warning btn-sm'>Editar</a> 
-                                            <a href='excluir_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-outline-danger btn-sm'>Excluir</a>
+                                            <a href='Editar/editar_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-outline-warning btn-sm'>Editar</a> 
+                                            <a href='Excluir/excluir_livro.php?id=" . $livro['id_livro'] . "' class='btn btn-outline-danger btn-sm'>Excluir</a>
                                         </td>";
                                 echo "</tr>";
                             }
