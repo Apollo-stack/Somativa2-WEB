@@ -28,7 +28,7 @@ if ($resultado->num_rows === 1) {
 
     } else {
         
-        header("Location: login.html?erro=true");
+        header("Location: index.html?erro=true");
         exit;
     }
     
