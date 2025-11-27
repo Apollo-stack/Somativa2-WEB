@@ -13,6 +13,8 @@ body {
     width: 100%;
     max-width: 400px; /* Largura máxima um pouco menor */
     padding: 20px;
+    border: solid 2px;
+    
 }
 
 /* Estilo específico para o cartão de cadastro */
