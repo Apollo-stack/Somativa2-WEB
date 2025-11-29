@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 27/11/2025 às 19:20
+-- Host: localhost
+-- Tempo de geração: 29/11/2025 às 14:31
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -37,7 +37,7 @@ CREATE TABLE `autores` (
 --
 
 INSERT INTO `autores` (`id_autor`, `nome_autor`) VALUES
-(15, 'J. R. R. Tolkien');
+(21, 'Teste 1');
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,7 @@ CREATE TABLE `livros` (
 --
 
 INSERT INTO `livros` (`id_livro`, `titulo`, `genero`, `ano_publicacao`, `id_autor`) VALUES
-(5, 'O Senhor dos Anéis', 'Fantasia', 1937, 15);
+(8, 'teste', 'teste 1', 1989, 21);
 
 -- --------------------------------------------------------
 
@@ -78,10 +78,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nome_usuario`, `email`, `senha`) VALUES
-(3, 'matheus', 'matheusramon0208@gmail.com', '$2y$10$YwePP7uLgI9aUK/FLaZ17OFtfdWFkwF3tyyFKKijeWR/NnxQfM86a'),
-(5, 'jbj', 'matheus@dentalpaulista.com.br', '$2y$10$hD/RWkRHsV5XBPm7laD6Xe5OTvBcA88VzNilC85G2uQfU/BrWMlKC'),
-(7, 'jbj', 'login@gmail.com', '$2y$10$Z/3QDo4GhJ7s8C5nQLmZTesjWJlhNj8auV1uw994oJNlNfrtf8tB6'),
-(9, 'jbj', 'logins@gmail.com', '$2y$10$5VtGf0mSaPKIFS3io4DM9ukJd3Q/baPknv.WhqG4g5nY4saM0IPSG');
+(23, 'Matheus', 'teste@gmail.com', '$2y$10$Ru/psGhXWn85n76NYCk4Ue4VG2Koo1NT8CV3N3il.Sb8uv/rTQlLC'),
+(24, 'Matheus', 'teste2@gmail.com', '$2y$10$EKblU7/NwJfbvKcnF96Yre/xXaXXtkezI6WG3VDw3Wfx4BLSYmYey');
 
 --
 -- Índices para tabelas despejadas
@@ -115,19 +113,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `autores`
 --
 ALTER TABLE `autores`
-  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id_livro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_livro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Restrições para tabelas despejadas
