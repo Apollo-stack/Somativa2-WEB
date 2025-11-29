@@ -12,7 +12,6 @@ require_once '../conexao.php';
 
 $id_autor = $_GET['id']; 
 
-//Busca os dados do autor
 $sql = "SELECT nome_autor FROM autores WHERE id_autor = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $id_autor);
@@ -20,7 +19,6 @@ $stmt->execute();
 $resultado = $stmt->get_result();
 $autor = $resultado->fetch_assoc();
 
-// Salva o nome atual para usar no value do input
 $nome_atual = $autor['nome_autor'];
 
 $stmt->close();

@@ -1,26 +1,21 @@
-/* Configuração Geral */
 body {
     font-family: sans-serif; 
     background-color: #f0f2f5; 
 
 }
 
-/* --- CLASSE ESPECIAL SÓ PARA LOGIN E CADASTRO --- */
+/* Só para o index e o formulario*/
 .modo-login {
-    height: 100vh; /* Força altura total */
-    display: flex; /* Ativa o Flexbox */
+    height: 100vh; 
+    display: flex; 
     align-items: center; 
     justify-content: center; 
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('../Img/fundo_login4.jpg');  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../Img/fundo_login4.jpg');  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-
-/* Estilo específico para o cartão de login */
 .card-login {
     width: 100%;
     max-width: 400px; 
@@ -29,13 +24,12 @@ body {
     
 }
 
-/* Estilo específico para o cartão de cadastro */
 .card-cadastro {
     width: 100%;
     max-width: 500px; 
 }
 
-/* Botão Personalizado */
+
 .btn-custom {
     background-color: #900C3F; 
     color: white;
@@ -47,7 +41,6 @@ body {
     color: white;
 }
 
-/* Cabeçalho da Tabela com a cor do tema */
 .table-theme thead th {
     background-color: #900C3F; 
     color: white;

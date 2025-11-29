@@ -17,7 +17,6 @@ if ($resultado->num_rows === 1) {
     $usuario = $resultado->fetch_assoc();
     $hash_do_banco = $usuario['senha']; 
 
-    // Verifica a senha
     if (password_verify($senha, $hash_do_banco)) {
         
         $_SESSION['usuario_id'] = $usuario['id_usuario']; // Confirma o nome da coluna ID

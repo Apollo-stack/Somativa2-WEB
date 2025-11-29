@@ -1,9 +1,8 @@
 <?php
 
-// Inicia a sessão
 session_start();
 
-// Segurança para a sessão, se o usuario_id não existir é porque ele não está logado
+// Se o usuario_id não existir é porque ele não está logado
 if (!isset($_SESSION['usuario_id'])) {
     header("Location: index.html");
     exit;
@@ -12,14 +11,12 @@ if (!isset($_SESSION['usuario_id'])) {
 // Se estiver logado continua
 $nome_usuario = $_SESSION['usuario_nome'];
 
-// Conecta no banco de dados
+
 require_once 'conexao.php';
 
-// Busca todos os autores 
 $sql_autores = "SELECT id_autor, nome_autor FROM autores ORDER BY nome_autor";
 $resultado_autores = $conn->query($sql_autores);
 
-// Busca todos os livros E o nome do autor 
 $sql_livros = "SELECT 
                     l.id_livro, 
                     l.titulo, 
@@ -36,7 +33,7 @@ $resultado_livros = $conn->query($sql_livros);
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard - Minha Biblioteca</title>
+    <title>Dashboard - Biblioteca Digital</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="CSS/style.css" rel="stylesheet">
 
@@ -49,11 +46,11 @@ $resultado_livros = $conn->query($sql_livros);
         <div class="card-body d-flex justify-content-between align-items-center">
             
             <div class="d-flex align-items-center">
-                <h1 class="h4 mb-0 text-secondary">📚 Minha Biblioteca</h1>
+                <h1 class="h4 mb-0 text-secondary">Minha Biblioteca</h1>
             </div>
 
             <div>
-                <span class="me-4">Olá, <strong><?php echo htmlspecialchars($nome_usuario); ?></strong></span>
+                <span class="me-4">Bem-vindo, <strong><?php echo htmlspecialchars($nome_usuario); ?></strong></span>
                 
                 <a href="logout.php" class="btn btn-dark btn-sm">Sair</a>
             </div>
@@ -95,7 +92,6 @@ $resultado_livros = $conn->query($sql_livros);
                         
                         <?php
                         
-                        // Usa a variavel lá de cima
                         if ($resultado_autores->num_rows > 0) { 
                             while ($autor = $resultado_autores->fetch_assoc()) {
                                 echo "<tr>";
@@ -136,7 +132,7 @@ $resultado_livros = $conn->query($sql_livros);
 
                     <div class="mb-3">
                         <label for="anoInput" class="form-label">Ano de Publicação:</label>
-                        <input type="number" class="form-control" id="anoInput" name="ano_publicacao" min="1000" max="2099">
+                        <input type="number" class="form-control" id="anoInput" name="ano_publicacao" min="0" max="2099">
                     </div>
 
                     <div class="mb-3">
@@ -146,9 +142,8 @@ $resultado_livros = $conn->query($sql_livros);
                             
                             <?php
                             
-                            // Usa a variável $resultado_autores lá de cima
+                           
                             if ($resultado_autores->num_rows > 0) {
-                                // O rewind "rebobina" o resultado, caso ele já tenha sido usado
                                 $resultado_autores->data_seek(0); 
                                 while ($autor = $resultado_autores->fetch_assoc()) {
                                     echo "<option value='" . $autor['id_autor'] . "'>" . htmlspecialchars($autor['nome_autor']) . "</option>";
@@ -179,13 +174,11 @@ $resultado_livros = $conn->query($sql_livros);
                     <tbody>
                         
                         <?php
-                        // Loop PHP para imprimir os dados dos LIVROS
-                        // Usamos a variável $resultado_livros 
+            
                         if ($resultado_livros->num_rows > 0) {
                             while ($livro = $resultado_livros->fetch_assoc()) {
                                 echo "<tr>";
                                     echo "<td>" . htmlspecialchars($livro['titulo']) . "</td>";
-                                    // podemos mostrar o nome do autor
                                     echo "<td>" . htmlspecialchars($livro['nome_autor']) . "</td>";
                                     echo "<td>" . htmlspecialchars($livro['genero']) . "</td>";
                                     echo "<td>" . $livro['ano_publicacao'] . "</td>";
@@ -205,5 +198,6 @@ $resultado_livros = $conn->query($sql_livros);
             </div>
         </div>
 
-    </div> </body>
+    </div>
+</body>
 </html>
